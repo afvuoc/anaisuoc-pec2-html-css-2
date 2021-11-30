@@ -1,0 +1,55 @@
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/atarashii-background.jpg");
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-position: center;
+  /* Center the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+
+.modal{
+  display: flex;
+}
+.modal-content {
+  padding:1.5vw;
+  text-align: center;
+}
+
+.modal-text-center{
+  justify-content: center;
+
+}
+.btn {
+  padding: 12px 22px;
+}
+
+.btn:hover {
+
+    opacity: .75;
+
+}
+
+@media (max-width:$atarashii-gakko-tablet) {
+
+
+  body {
+    background-image: url("../images/atarashii-background-tablet.jpg");
+  }
+
+}
+
+
+@media (max-width: $atarashii-gakko-phone) {
+
+  body {
+    background-image: url("../images/atarashii-background-phone.jpg");
+  }
+  .modal.show .modal-dialog {
+    margin-right: auto;
+    margin-left: auto;
+}
+}
