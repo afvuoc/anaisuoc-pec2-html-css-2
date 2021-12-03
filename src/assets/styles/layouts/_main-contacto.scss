@@ -13,8 +13,7 @@
   object-fit: cover;
 }
 
-/* formulario de contacto */
-
+/* Contact form */
 form {
   width: 80%;
   padding-top: 16.5vh;
@@ -23,11 +22,11 @@ form {
 
 .form-fields{
   position: relative;
-left: 50vw;
-z-index: 1;
-width: 50vw;
-min-height: 90.9vh;
-background-color: $atarashii-gakko-white;
+  left: 50vw;
+  z-index: 1;
+  width: 50vw;
+  min-height: 90.9vh;
+  background-color: $atarashii-gakko-white;
 }
 
 .form-fields form {
@@ -66,7 +65,6 @@ background-color: $atarashii-gakko-white;
     textarea {
       @include sucess-error($atarashii-gakko-error);
     }
-
   }
 
   &:hover input{
@@ -95,7 +93,6 @@ input{
   }
 }
 
-
 .form-control textarea {
     box-sizing: border-box;
     width: 100%;
@@ -115,7 +112,6 @@ input{
     }
 }
 
-
 .form-control small {
   position: $atarashii-gakko-position-absolute;
   right: 0;
@@ -132,69 +128,52 @@ input{
   padding:12px 22px;
   margin-top:2vh;
 
-
   &:hover {
-    // background-color:$atarashii-gakko-black;
     opacity:.75;
-
-    }
+  }
 }
 
-/* footer */
-/* media queries contacto */
+
+/* media queries */
 @media (max-width: $atarashii-gakko-tablet){
 
   .atarashi-members-left {
     position: relative;
     width: 100vw;
+  }
 
-}
+  .atarashi-members-left > img {
+    width: 100vw;
+    height:65vh;
+    object-position: top;
+  }
 
-.atarashi-members-left > img {
-  width: 100vw;
-  height:65vh;
-  object-position: top;
-}
+  .form-fields {
+    left: 0;
+    width: 100vw;
+    min-height: $atarashii-gakko-auto;
+  }
 
-.form-fields {
-  left: 0;
-  width: 100vw;
-  min-height: $atarashii-gakko-auto;
-}
-.form-fields form {
-  width: 85vw;
-  padding-top: 11vh;
-  padding-bottom: 10vh;
-}
-
-
+  .form-fields form {
+    width: 85vw;
+    padding-top: 11vh;
+    padding-bottom: 10vh;
+  }
 }
 
 @media (max-width: $atarashii-gakko-phone){
-  nav ul {
-    width: 70vw;
-}nav a img {
-  left: 4%;
-}
-
-  nav ul li a {
-    font-size: .9rem;
-  }
-  nav ul li:first-child {
-    margin-top: 48px;
-  }
 
   form {
     padding-top: 10vh;
     padding-bottom: 10vh;
-}
-.form-fields form .form-control {
-  padding-bottom: 6%;
-}
+  }
 
-.btn {
-  width: 85vw;
-  margin-top: 2vh;
-}
+  .form-fields form .form-control {
+    padding-bottom: 6%;
+  }
 
+  .btn {
+    width: 85vw;
+    margin-top: 2vh;
+  }
 }

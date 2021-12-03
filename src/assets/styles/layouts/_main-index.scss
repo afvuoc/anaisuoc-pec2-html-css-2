@@ -6,11 +6,8 @@ section:first-child {
   height: 100vh;
   background-image: url("../images/atarashii-background.jpg");
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   background-position: center;
-  /* Center the image */
   background-size: cover;
-  /* Resize the background image to cover the entire container */
 }
 
 
@@ -47,7 +44,6 @@ section:first-child {
   animation-delay: 15s;
 }
 
-
 @keyframes swiper-slide-text {
   0% {
     left: 100%;
@@ -58,8 +54,41 @@ section:first-child {
   }
 }
 
+/* Index - Presentación  media queries */
+@media (max-width:$atarashii-gakko-tablet) {
 
-/* STICKER GRID  *******************************************************************************************************************************************************************************************/
+  section:first-child {
+    background-image: url("../images/atarashii-background-tablet.jpg");
+  }
+
+  .swiper-slide-text {
+    animation: swiper-slide-text 10s linear infinite;
+  }
+
+  .swiper-slide-text-2 {
+    animation-delay: 5s;
+  }
+}
+
+
+@media (max-width: $atarashii-gakko-phone) {
+
+  section:first-child {
+    background-image: url("../images/atarashii-background-phone.jpg");
+  }
+
+  .swiper-slide-text {
+    animation: swiper-slide-text 9s linear infinite;
+  }
+
+  .swiper-slide-text-2 {
+    animation-delay: 4.5s;
+  }
+
+}
+
+
+/*sticker grid*/
 .sticker {
   position: $atarashii-gakko-position-absolute;
   bottom: 12%;
@@ -72,28 +101,29 @@ section:first-child {
   transform: rotate(-8deg);
 }
 
-
+// Si tiene soporte
 @supports (display: grid) {
 
   .sticker-grid {
     display: grid;
-  
     grid-gap: .4rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
   .sticker-grid img {
     width: $atarashii-gakko-auto;
     height: 100px;
   }
 }
 
-// Si no es compatible con grid
+// Si no tiene soporte
 @supports not(display: grid) {
+
   .sticker-grid {
     display: flex;
-flex-wrap: wrap;
-gap: .4rem;
+    flex-wrap: wrap;
+    gap: .4rem;
   }
 
   .sticker-grid img {
@@ -121,7 +151,6 @@ gap: .4rem;
   height: 3vh;
   padding-top: .5rem;
 }
-
 
 input[type="button"] {
   position: $atarashii-gakko-position-absolute;
@@ -153,7 +182,7 @@ input[type="button"] {
   }
 }
 
-/* STICKER GRID mediaquery*/
+/* Sticker grid media queries*/
 @media (max-width:$atarashii-gakko-tablet) {
   .sticker {
     bottom: 8%;
@@ -184,12 +213,7 @@ input[type="button"] {
 
 }
 
-/***********************************************************************************************************************************/
-
-/* concert-grid ***********************************************************************************************************************************/
-
-// TODO: cambiar el NOT!!!!
-
+/*concert grid */
 .concert-grid {
   background: $atarashii-gakko-white;
 }
@@ -216,7 +240,6 @@ input[type="button"] {
   background-color: $atarashii-gakko-white;
 }
 
-
 .concert-grid-c .concert-grid-c-1 h1 {
   font-family: $atarashii-gakko-font-family-holtwood;
   font-weight: 900;
@@ -239,135 +262,14 @@ input[type="button"] {
   transition: $atarashii-gakko-transition-04;
 }
 
-@supports not(display: grid) {
-  .concert-grid {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    align-items: stretch;
-  }
-
-  .concert-grid div{
-    position: relative;
-    flex: 1 1 auto;
-    width: 25vw;
-    height: auto;
-    overflow: hidden;
-  }
-
-  .concert-grid div img{
-    object-fit: cover;
-  }
-
-  .concert-grid .concert-grid-c{
-    width: 50vw;
-    margin-top:auto;
-    margin-bottom:auto;
-    text-align: center;
-  
-  } 
-
-  .concert-grid  .concert-grid-c .concert-grid-c-1, 
-  .concert-grid  .concert-grid-c .concert-grid-c-2,
-  .concert-grid  .concert-grid-c .concert-grid-c-3{
-    width:48vw;
-    margin: 2vw;
-  }
-
-  .concert-grid  .concert-grid-c .concert-grid-c-1 h1 {
-    font-size: 3vw;
-  }
-  .concert-grid  .concert-grid-c .concert-grid-c-3 img {
-    width: 70%;
-  }
-
-  .concert-grid  .concert-grid-d{
-     width: 50vw;
-  }
-  .concert-grid  .concert-grid-i{
-    order:1;
-    width: 50vw;
-  }
-  .concert-grid  .concert-grid-e{
-    order:2;
-  }
-
-  .concert-grid .concert-grid-f{
-    order:3;
-  }
-  .concert-grid  .concert-grid-g{
-    order:4;
-  }
-  .concert-grid  .concert-grid-h{
-    order:5;
-  }
- 
-  .concert-grid  .concert-grid-j,
-  .concert-grid .concert-grid-k,
-  .concert-grid .concert-grid-l{
-    display:none;
-  }
- 
-  @media (max-width:$atarashii-gakko-tablet) {
-    .concert-grid  .concert-grid-a,
-    .concert-grid  .concert-grid-b,
-    .concert-grid  .concert-grid-e,
-    .concert-grid .concert-grid-f,
-    .concert-grid  .concert-grid-g,
-    .concert-grid  .concert-grid-h
-    {
-      display:none;
-    }
-    
-    .concert-grid  .concert-grid-c {
-      width: 100vw;
-      margin-top:6vw;
-      margin-bottom:6vw;
-  }
-
-  .concert-grid  .concert-grid-c .concert-grid-c-1,
-  .concert-grid  .concert-grid-c .concert-grid-c-2,
-  .concert-grid  .concert-grid-c .concert-grid-c-3 {
-    width: 92vw;
-    margin: 4vw; 
-}
-
-.concert-grid  .concert-grid-c .concert-grid-c-1 h1 {
-  font-size: 5vw;
-}
-.concert-grid  .concert-grid-c .concert-grid-c-2 h3 {
-  font-size: 4vw;
-}
-.concert-grid  .concert-grid-c .concert-grid-c-3 img {
-  width: 60%;
-}
-.concert-grid  .concert-grid-d {
-  width: 100vw;
-}
-.concert-grid  .concert-grid-i {
-  width: 100vw;
-}
-  }
-  @media (max-width: $atarashii-gakko-phone) {
-    .concert-grid  .concert-grid-c .concert-grid-c-1 h1 {
-    font-size: 6vw;
-  
-    }
-    .concert-grid   .concert-grid-c .concert-grid-c-2 h3 {
-      font-size: 5vw;
-  }
-  .concert-grid  .concert-grid-c .concert-grid-c-3 img {
-    width: 70%;
-}} 
-}
-
+//Si tiene soporte
 @supports (display: grid) {
+
   .concert-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: $atarashii-gakko-auto;
   }
-
 
   .concert-grid-c {
     display: grid;
@@ -395,7 +297,7 @@ input[type="button"] {
     grid-row: 3/5;
   }
 
-  /* concert-grid mediaquery*/
+  /* concert-grid media queries*/
   @media (max-width:$atarashii-gakko-tablet) {
 
     .concert-grid {
@@ -448,7 +350,6 @@ input[type="button"] {
       display: none;
     }
 
-
     .concert-grid-c {
       grid-column: 1;
       padding: 8.8vw;
@@ -481,39 +382,136 @@ input[type="button"] {
   }
 }
 
-/***********************************************************************************************************************************/
-
-
-@media (max-width:$atarashii-gakko-tablet) {
-
-
-  section:first-child {
-    background-image: url("../images/atarashii-background-tablet.jpg");
+// Si no tiene soporte
+@supports not(display: grid) {
+  .concert-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: stretch;
   }
 
-  .swiper-slide-text {
-    animation: swiper-slide-text 10s linear infinite;
+  .concert-grid div{
+    position: relative;
+    flex: 1 1 $atarashii-gakko-auto;
+    width: 25vw;
+    height: $atarashii-gakko-auto;
+    overflow: hidden;
   }
 
-  .swiper-slide-text-2 {
-    animation-delay: 5s;
+  .concert-grid div img{
+    object-fit: cover;
   }
+
+  .concert-grid .concert-grid-c{
+    width: 50vw;
+    margin-top:$atarashii-gakko-auto;
+    margin-bottom:$atarashii-gakko-auto;
+    text-align: center;
+  } 
+
+  .concert-grid .concert-grid-c .concert-grid-c-1, 
+  .concert-grid .concert-grid-c .concert-grid-c-2,
+  .concert-grid .concert-grid-c .concert-grid-c-3{
+    width:48vw;
+    margin: 2vw;
+  }
+
+  .concert-grid  .concert-grid-c .concert-grid-c-1 h1 {
+    font-size: 3vw;
+  }
+
+  .concert-grid  .concert-grid-c .concert-grid-c-3 img {
+    width: 70%;
+  }
+
+  .concert-grid  .concert-grid-d{
+    width: 50vw;
+  }
+
+  .concert-grid .concert-grid-i{
+    order:1;
+    width: 50vw;
+  }
+
+  .concert-grid .concert-grid-e{
+    order:2;
+  }
+
+  .concert-grid .concert-grid-f{
+    order:3;
+  }
+
+  .concert-grid  .concert-grid-g{
+    order:4;
+  }
+
+  .concert-grid  .concert-grid-h{
+    order:5;
+  }
+ 
+  .concert-grid  .concert-grid-j,
+  .concert-grid .concert-grid-k,
+  .concert-grid .concert-grid-l{
+    display:none;
+  }
+ 
+  /* concert-grid media queries*/
+  @media (max-width:$atarashii-gakko-tablet) {
+    .concert-grid  .concert-grid-a,
+    .concert-grid  .concert-grid-b,
+    .concert-grid  .concert-grid-e,
+    .concert-grid .concert-grid-f,
+    .concert-grid  .concert-grid-g,
+    .concert-grid  .concert-grid-h{
+      display:none;
+    }
+    
+    .concert-grid  .concert-grid-c{
+      width: 100vw;
+      margin-top:6vw;
+      margin-bottom:6vw;
+    }
+
+    .concert-grid  .concert-grid-c .concert-grid-c-1,
+    .concert-grid  .concert-grid-c .concert-grid-c-2,
+    .concert-grid  .concert-grid-c .concert-grid-c-3 {
+      width: 92vw;
+      margin: 4vw; 
+    }
+
+    .concert-grid  .concert-grid-c .concert-grid-c-1 h1 {
+      font-size: 5vw;
+    }
+
+    .concert-grid  .concert-grid-c .concert-grid-c-2 h3 {
+      font-size: 4vw;
+    }
+
+    .concert-grid  .concert-grid-c .concert-grid-c-3 img {
+      width: 60%;
+    }
+
+    .concert-grid  .concert-grid-d {
+      width: 100vw;
+    }
+
+    .concert-grid  .concert-grid-i {
+      width: 100vw;
+    }
+  }
+
+  @media (max-width: $atarashii-gakko-phone) {
+    .concert-grid  .concert-grid-c .concert-grid-c-1 h1 {
+      font-size: 6vw;
+    }
+
+    .concert-grid   .concert-grid-c .concert-grid-c-2 h3 {
+      font-size: 5vw;
+    }
+
+    .concert-grid  .concert-grid-c .concert-grid-c-3 img {
+      width: 70%;
+    }
+  } 
 }
-
-
-@media (max-width: $atarashii-gakko-phone) {
-
-  section:first-child {
-    background-image: url("../images/atarashii-background-phone.jpg");
-  }
-
-  .swiper-slide-text {
-    animation: swiper-slide-text 9s linear infinite;
-  }
-
-  .swiper-slide-text-2 {
-    animation-delay: 4.5s;
-  }
-
-}
-

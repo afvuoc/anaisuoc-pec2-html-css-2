@@ -9,11 +9,9 @@ $atarashii-gakko-error: #e74c3c;
 $atarashii-gakko-lightness: color.scale($atarashii-gakko-corporate-color, $lightness: 5%);
 $atarashii-gakko-lightness-2: color.scale($atarashii-gakko-black, $lightness: 10%);
 
-
 $atarashii-gakko-font-family-lato: "Lato", Arial, sans-serif;
 $atarashii-gakko-font-family-apercu: "Apercu", Arial, sans-serif;
 $atarashii-gakko-font-family-holtwood: "Holtwood One SC", Arial, serif;
-
 
 $atarashii-gakko-transition-1: 1s;
 $atarashii-gakko-transition-03: .3s;
@@ -35,16 +33,15 @@ $carrousel-bottom:calc(6vh - 2%);
 }
 
 // Bootstrap overwrites
-
-// Button component (contact)
+// Button component
 $btn-border-radius: 0rem;
 $btn-font-size:  1.15rem;
 
-// Tooltip (index)
+// Tooltip
 $tooltip-color:#000000;
 $tooltip-bg: #ffffff;
 
-// Modal component (thankyou)
+// Modal component
 $modal-content-border-width: 0px;
 
 // Card

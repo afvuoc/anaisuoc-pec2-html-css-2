@@ -1,11 +1,12 @@
 body{
-  background-color:#000000;
+  background-color: $atarashii-gakko-black;
 }
 
 .container-fluid{
   width: 95.5vw;
-    padding-top: 100px;
+  padding-top: 100px;
 }
+
 .item{
   display:flex;
 }
@@ -33,14 +34,12 @@ body{
   &:last-child{
     margin-bottom: .8rem;
     opacity: .7;
-  }
-  
+  } 
 }
 
 .card p b{
   margin-right: .5rem;
   margin-left: .5rem;
   font-size:.8rem;
-
 }
 
