@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.header-notice article{
+.header-notice article {
   &:first-child {
     position: fixed;
     width: 50vw;
@@ -20,21 +20,21 @@
       z-index: 4;
       width: 50vw;
       padding: 1.5vw;
-      margin:$atarashii-gakko-auto;
+      margin: $atarashii-gakko-auto;
       font-family: $atarashii-gakko-font-family-holtwood;
       font-size: 1.3rem;
       text-align: center;
       text-transform: uppercase;
-      background-color:$atarashii-gakko-white;
+      background-color: $atarashii-gakko-white;
     }
 
-    img{
-      object-fit:cover;
-      width:50vw;
-      height:100vh;
+    img {
+      object-fit: cover;
+      width: 50vw;
+      height: 100vh;
       object-position: bottom;
     
-      &:first-child{
+      &:first-child {
         position: $atarashii-gakko-position-absolute;
         top: -15vh;
         right: 0;
@@ -55,7 +55,7 @@
     width: 50vw;
     height: $atarashii-gakko-auto;
     margin-left: $atarashii-gakko-auto;
-    background-color:$atarashii-gakko-black;
+    background-color: $atarashii-gakko-black;
   }
 }
 
@@ -79,7 +79,7 @@
 
 .header-notice-vynil img {
   position: $atarashii-gakko-position-absolute;
-  top:32vh;
+  top: 32vh;
   right: 0;
   bottom:0;
    left: 0;
@@ -88,12 +88,12 @@
    animation: move-vynil 1.5s;
 
    &:last-child {
-    top:-12vh;
+    top: -12vh;
     z-index: -1;
     width: 46vh;
-    margin-top:$atarashii-gakko-auto;
+    margin-top: $atarashii-gakko-auto;
     animation: rotate-vynil 3s linear infinite;
-    animation-delay:1.5s;
+    animation-delay: 1.5s;
   }
 }
 
@@ -119,8 +119,8 @@
 }
 
 
-/* media queries header notice*/
-@media (max-width:1100px){
+/* Media queries header notice*/
+@media (max-width:1100px) {
 
   .header-notice article:first-child,
   .header-notice article:first-child img {
@@ -142,7 +142,7 @@
   }
 }
 
-@media (max-width: $atarashii-gakko-tablet){
+@media (max-width: $atarashii-gakko-tablet) {
 
   .header-notice {
     display: flex;
@@ -185,7 +185,7 @@
     top: 20vh;
 
     &:first-child {
-      animation:none;
+      animation: none;
     }
 
     &:last-child {
@@ -196,9 +196,9 @@
   }
 }
 
-@media (max-width: $atarashii-gakko-phone){
+@media (max-width: $atarashii-gakko-phone) {
   
-  p{
+  p {
     font-size: .95rem;
   }
 
@@ -228,64 +228,64 @@
 }
 
 /* Body notice*/
-.body-notice{
+.body-notice {
   width: 50vw;
-  padding-top:8vh;
-  padding-right:5vw;
-  padding-bottom:8vh;
-  padding-left:5vw;
-  color:$atarashii-gakko-white;
+  padding-top: 8vh;
+  padding-right: 5vw;
+  padding-bottom: 8vh;
+  padding-left: 5vw;
+  color: $atarashii-gakko-white;
 }
 
 .body-notice h2,
 .body-notice p,
 .body-notice img,
 .body-notice hr,
-.body-notice blockquote{
-  width:100%;
+.body-notice blockquote {
+  width: 100%;
 }
 
 .body-notice h2 {
   margin-bottom: 2vh;
   font-family: $atarashii-gakko-font-family-lato;
-  font-size:1.4rem;
+  font-size: 1.4rem;
 }
 
-.body-notice img{
-  display:flex;
+.body-notice img {
+  display: flex;
   object-fit: cover;
-  max-height:50vh;
-  margin-top:5vh;
+  max-height: 50vh;
+  margin-top: 5vh;
 }
 
 .body-notice hr {
-  height:3px;
-  margin-top:5vh;
+  height: 3px;
+  margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
 .body-notice div p,
-blockquote{
-margin-bottom:2vh;
+blockquote {
+margin-bottom: 2vh;
 }
 
-.body-notice div p:last-child{
-margin-bottom:0vh;
+.body-notice div p:last-child {
+margin-bottom: 0vh;
 }
 
 .body-notice cite,
 .body-notice blockquote {
-  font-style:italic;
+  font-style: italic;
   font-weight: 600;
 }
 
-.body-notice ul{
-  width:40vw;
-  padding-left:2vw;
+.body-notice ul {
+  width: 40vw;
+  padding-left: 2vw;
 }
 
-.body-notice li{
-  padding-left:.25vw;
+.body-notice li {
+  padding-left: .25vw;
   list-style: circle;
 }
 
@@ -294,21 +294,22 @@ margin-bottom:0vh;
   font-size: 0;
 }
 
-iframe{
-  position:relative;
+iframe {
+  position: relative;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
 }
 
-/* media queries body notice*/
-@media (max-width:1100px){
+/* Media queries body notice*/
+@media (max-width:1100px) {
+
   .body-notice{
     width: 60vw;
   }
 }
 
-@media (max-width: $atarashii-gakko-tablet){
+@media (max-width: $atarashii-gakko-tablet) {
 
   .body-notice {
     width: 100vw;
@@ -319,12 +320,16 @@ iframe{
 
   .body-notice p,
   .body-notice hr,
-  .body-notice blockquote{
+  .body-notice blockquote {
     text-align: justify;
+  }
+
+  iframe {
+    height: 70vh;
   }
 }
 
-@media (max-width: $atarashii-gakko-phone){
+@media (max-width: $atarashii-gakko-phone) {
 
   .body-notice h2 {
     font-size: 1.3rem;
@@ -339,6 +344,6 @@ iframe{
   }
 
   iframe {
-    height: 70vh;
+    height: 50vh;
   }
 }

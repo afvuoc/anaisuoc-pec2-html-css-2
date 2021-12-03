@@ -1,13 +1,13 @@
 /*Carousel*/
-.carrousel{
+.carrousel {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background:  $atarashii-gakko-white;
+  background: $atarashii-gakko-white;
 }
 
-.carrousel .slides{
+.carrousel .slides {
   position: relative;
   width: 300%;
   padding:0;
@@ -16,44 +16,44 @@
   transition: left .75s ease-out;
 }
 
-.carrousel input{
+.carrousel input {
   display: none;
 }
 
-.carrousel .slides li{
+.carrousel .slides li {
   position: relative;
   float: left;
   width: $carrousel-with;
 }
 
-.carrousel li p{
+.carrousel li p {
   position: $atarashii-gakko-position-absolute;
   right: 3.5%;
   bottom: 6vh;
   width: 24vw;
   padding: 2%;
   font-size: 1.05rem;
-  color:  $atarashii-gakko-white;
+  color: $atarashii-gakko-white;
   background-color: $atarashii-gakko-black; 
   transform: rotate(0deg);
 }
 
-.carrousel li img{
+.carrousel li img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
 }
 
-.carrousel .slides-navigation{
+.carrousel .slides-navigation {
   position: $atarashii-gakko-position-absolute;
   right: 0;
-  bottom:$carrousel-bottom;
+  bottom: $carrousel-bottom;
   left: 0;
   width: 81px;
   margin: $atarashii-gakko-auto;
 }
 
-.carrousel .slides-navigation label{
+.carrousel .slides-navigation label {
   display: flex;
   flex-direction: column;
   float: left;
@@ -66,33 +66,33 @@
   border-radius: 50%;
 }
 
-#radio-1:checked ~ .slides{
+#radio-1:checked ~ .slides {
   left: 0;
 }
 
-#radio-2:checked ~ .slides{
+#radio-2:checked ~ .slides {
   left: -100%;
 }
 
-#radio-3:checked ~ .slides{
+#radio-3:checked ~ .slides {
   left: -200%;
 }
 
 .carrousel #radio-1:checked ~ .slides-navigation label#dotForRadio-1,
 .carrousel #radio-2:checked ~ .slides-navigation label#dotForRadio-2,
-.carrousel #radio-3:checked ~ .slides-navigation label#dotForRadio-3{
-  background:  $atarashii-gakko-white;
+.carrousel #radio-3:checked ~ .slides-navigation label#dotForRadio-3 {
+  background: $atarashii-gakko-white;
 }
 
-/*Media queries carrrousel*/
-@media (max-width:1100px){
+/* Media queries carrrousel */
+@media (max-width:1100px) {
   .carrousel li p {
     width: 33vw;
     font-size: 1rem;
   }
 }
 
-@media (max-width: $atarashii-gakko-tablet){
+@media (max-width: $atarashii-gakko-tablet) {
 
   .carrousel li p {
     right: 0;
@@ -108,18 +108,17 @@
     opacity: .8;
   }
 
-  .carrousel .slides-navigation{
+  .carrousel .slides-navigation {
     width: 75px;
   }
   
-  .carrousel .slides-navigation label{
+  .carrousel .slides-navigation label {
     width: 13px;
     height: 13px;
   }
 }
 
-/* Card felx*/
-
+/* Cards flexbox*/
 .container-flex {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +128,7 @@
 }
 
 .cards-flex {
-  display:flex;
+  display: flex;
   width: 25%;
   padding: .9rem;
   margin-bottom: 1rem;
@@ -151,7 +150,7 @@
   }
 }
 
-.card-image-flex{
+.card-image-flex {
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -207,17 +206,17 @@
   }
 }
   
-.card-rrss-flex i{
+.card-rrss-flex i {
   height: $atarashii-gakko-auto;
   font-size: 4rem;
   color:$atarashii-gakko-white;
   transition:.7s;
 
-  &:first-child{
+  &:first-child {
     padding-right: .8rem;
   }
 
-  &:last-child{
+  &:last-child {
     padding-left: .8rem;
   }
 
@@ -234,7 +233,7 @@
   padding-top: 2rem;
   line-height: 1.5em;
   color: $atarashii-gakko-white;
-  text-align:center;
+  text-align: center;
 }
 
 .card-title-flex {
@@ -244,9 +243,9 @@
   color: $atarashii-gakko-white;
 }
 
-/* media queries cards flex*/
+/* Media queries cards flex*/
 @media (max-width: 1100px) {
-  .cards-flex  {
+  .cards-flex {
     width: 33.33%;
   }
 }

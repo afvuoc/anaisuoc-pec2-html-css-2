@@ -25,8 +25,8 @@ $atarashii-gakko-position-absolute: absolute;
 $atarashii-gakko-border-bottom: 2px solid $atarashii-gakko-corporate-color-2;
 $atarashii-gakko-filter-invert: invert(100%);
 
-$carrousel-with:100%,3;
-$carrousel-bottom:calc(6vh - 2%);
+$carrousel-with: 100%,3;
+$carrousel-bottom: calc(6vh - 2%);
 
 @mixin sucess-error($color: #2ecc71) {
   border-color: $color;
@@ -35,7 +35,7 @@ $carrousel-bottom:calc(6vh - 2%);
 // Bootstrap overwrites
 // Button component
 $btn-border-radius: 0rem;
-$btn-font-size:  1.15rem;
+$btn-font-size: 1.15rem;
 
 // Tooltip
 $tooltip-color:#000000;
